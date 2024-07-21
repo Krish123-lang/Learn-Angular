@@ -10,3 +10,8 @@
 ![counter](image-4.png)
 ![counter](image-5.png)
 ---
+
+# Two-Way Data Binding
+![twdb](image-6.png)
+![twdb](image-7.png)
+---
