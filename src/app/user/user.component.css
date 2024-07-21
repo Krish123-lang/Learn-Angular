@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+
+.myClass {
+    color: orange;
+}
+
+.myFont {
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+}
