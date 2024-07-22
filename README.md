@@ -15,3 +15,7 @@
 ![twdb](image-6.png)
 ![twdb](image-7.png)
 ---
+
+# Data Binding
+![dataBinding](image-8.png)
+---

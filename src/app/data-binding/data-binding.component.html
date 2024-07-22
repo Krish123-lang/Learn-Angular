@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Binding</title>
+</head>
+
+<body>
+    <h1># One Way - From .ts to .html</h1>
+    <h1>1. Interpolation</h1>
+    <p>Course: {{courseName}}</p>
+    <input type="{{inputType}}" />Male
+    <input type="{{inputType}}" />Female
+    <input type="{{inputType}}" />Others
+    <p>Roll No: {{rollNo}}</p>
+    <p></p>
+    <p>Date: {{currentDate}}</p>
+
+    <h1>2. Property Binding</h1>
+    <input type="text" [value]="courseName" />
+    <input [type]="inputType">Male
+    <input [type]="inputType">Female
+    <input [type]="inputType">Others
+
+    <h1># One way - From .html to .ts</h1>
+    <h1>3. Event Binding</h1>
+    <button (click)="showAlert('welcome to angular 18')">Click me</button>
+    <span (mouseover)="mouseOverlogCon('logging into console on mouseOver !')">Hover me</span>
+
+    <h1># Two way data binding</h1>
+    <button (click)="changeCourseName()">{{courseName}}</button>
+
+    <h1># NgModel</h1>
+    <input type="text" [(ngModel)]="courseName"> - {{courseName}}
+
+    <select [(ngModel)]="stateName">
+        <option value="">Select</option>
+        <option value="Koshi">Koshi</option>
+        <option value="Gandaki">Gandaki</option>
+        <option value="Bagmati">Bagmati</option>
+    </select>
+
+    <h1># Signal</h1>
+    <p>{{firstName()}}</p>
+    <button (click)="changeFirstName()">Change Name</button>
+</body>
+
+</html>
