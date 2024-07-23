@@ -19,3 +19,7 @@
 # Data Binding
 ![dataBinding](image-8.png)
 ---
+
+# ngIf Directive
+![ngIf](image-9.png)
+
