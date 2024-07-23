@@ -6,11 +6,12 @@ import { TemplateReferenceComponent } from "./template-reference/template-refere
 import { CounterComponent } from "./counter/counter.component";
 import { TwoWayComponent } from "./two-way/two-way.component";
 import { DataBindingComponent } from "./data-binding/data-binding.component";
+import { StructdirComponent } from "./directives/structdir/structdir.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, UserComponent, NgclassComponent, TemplateReferenceComponent, CounterComponent, TwoWayComponent, DataBindingComponent],
+  imports: [RouterOutlet, UserComponent, NgclassComponent, TemplateReferenceComponent, CounterComponent, TwoWayComponent, DataBindingComponent, StructdirComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

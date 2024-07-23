@@ -1,0 +1,37 @@
+<h1>structural Directive</h1>
+*ngIf, *ngFor
+
+<div class="div-1">
+    <!-- Hide and show div 1 -->
+    <h3 *ngIf="isDiv1Visiable">Div-1</h3>
+    <button (click)="hide()">Hide</button>
+    <button (click)="show()">Show</button>
+</div>
+
+<div class="div-2">
+    <!-- show/hide on toggle -->
+    <h3 *ngIf="isDiv2Visiable">Div-2</h3>
+    <button (click)="toggleDiv2()">Toggle</button>
+</div>
+
+<div class="div-3">
+    <h3 *ngIf="num1==num2">Div-3</h3>
+    <!-- Only displays the Div 3 if both the fields contains same value -->
+    <input type="text" [(ngModel)]="num1" value="Num-1">
+    <input type="text" [(ngModel)]="num2" value="Num-2">
+</div>
+
+<div class="div-4">
+    <!-- Display this Div 4 only when the checkbox is clicked -->
+    <h3 *ngIf="isActive">Div-4</h3>
+    <input type="checkbox" [(ngModel)]="isActive" />
+</div>
+
+<!-- Display only when Koshi is selected -->
+<h2 *ngIf="selectedState == 'koshi'">Selected State</h2>
+<select name="" id="" [(ngModel)]="selectedState">
+    <option value="">Select State</option>
+    <option value="koshi">Koshi</option>
+    <option value="gandaki">Gandaki</option>
+    <option value="bagmati">Bagmati</option>
+</select>
