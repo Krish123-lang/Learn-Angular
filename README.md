@@ -23,3 +23,6 @@
 # ngIf Directive
 ![ngIf](image-9.png)
 
+# ngFor Directive
+![ngFor](image-10.png)
+---

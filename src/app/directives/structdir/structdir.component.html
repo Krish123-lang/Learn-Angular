@@ -35,3 +35,26 @@
     <option value="gandaki">Gandaki</option>
     <option value="bagmati">Bagmati</option>
 </select>
+
+<!-- NgFor -->
+<ul *ngIf="isListVisible">
+    <li *ngFor="let item of friendslist; let srNo=index;">
+        {{srNo+1}}. {{item.name}} => {{item.age}} years old.
+
+        <!-- <span *ngIf="item.age>20">{{srNo+1}}. {{item.name}} => {{item.age}} years old. </span> -->
+    </li>
+</ul>
+<button (click)="toggleList()">Toggle Hide/Show list</button>
+
+<ul *ngIf="isCitiesVisible">
+    <li *ngFor="let city of cities">
+        {{city}}
+    </li>
+</ul>
+<button (click)="toggleCities()">Toggle Cities</button>
+
+<!-- Dropdown -->
+<select name="" id="">
+    <option value="">Select City</option>
+    <option *ngFor="let city of cities" value="{{city}}">{{city}}</option>
+</select>
