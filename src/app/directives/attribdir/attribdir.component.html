@@ -1,0 +1,45 @@
+*ngClass, *ngStyle
+
+<h1>Attribute Directive</h1>
+
+<div>
+    <h1 [ngClass]="div1BgColor">Div-1</h1>
+    <button (click)="addRedBg()">Add Red</button>
+    <button (click)="addBlueBg()">Add Blue</button>
+</div>
+
+<div class="div-2">
+    <h2 [ngClass]="isDiv2Active?'green':'red'">Div-2</h2>
+    <button (click)="toggleDiv2()">Toggle</button>
+</div>
+
+<div class="div-3">
+    <h2 [ngClass]="num1==num2?'red':'blue'">Div-3</h2>
+    <input type="text" [(ngModel)]="num1" placeholder="Num-1">
+    <input type="text" [(ngModel)]="num2" placeholder="Num-2">
+</div>
+
+<div class="div-4">
+    <h2 [ngClass]="isActive?'red':'green'">Div-4</h2>
+    <input type="checkbox" name="" id="" [(ngModel)]="isActive">
+    <select name="" id="">
+        <option value="">Select State</option>
+    </select>
+</div>
+
+<table border="1px solid black">
+    <thead>
+        <tr>
+            <th>sno</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let flist of friendslist; let sno=index;">
+            <td>{{sno+1}}</td>
+            <td [ngStyle]="{'background-color': flist.name.startsWith('A')?'green':'red'}">{{flist.name}}</td>
+            <td [ngStyle]="{'background-color': flist.age>=18?'green':'red'}">{{flist.age}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -26,3 +26,7 @@
 # ngFor Directive
 ![ngFor](image-10.png)
 ---
+
+# ngClass, ngStyle
+![classStyle](image-11.png)
+---
