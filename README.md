@@ -1,36 +1,36 @@
 # Template Reference
 
-![templateReference](image.png)
-![templateReference](image-1.png)
-![templateReference](image-2.png)
+![templateReference](ReadmeImages/image.png)
+![templateReference](ReadmeImages/image-1.png)
+![templateReference](ReadmeImages/image-2.png)
 ---
 
 # Counter App
-![counter](image-3.png)
-![counter](image-4.png)
-![counter](image-5.png)
+![counter](ReadmeImages/image-3.png)
+![counter](ReadmeImages/image-4.png)
+![counter](ReadmeImages/image-5.png)
 ---
 
 # Two-Way Data Binding
-![twdb](image-6.png)
-![twdb](image-7.png)
+![twdb](ReadmeImages/image-6.png)
+![twdb](ReadmeImages/image-7.png)
 ---
 
 # Data Binding
-![dataBinding](image-8.png)
+![dataBinding](ReadmeImages/image-8.png)
 ---
 
 # ngIf Directive
-![ngIf](image-9.png)
+![ngIf](ReadmeImages/image-9.png)
 
 # ngFor Directive
-![ngFor](image-10.png)
+![ngFor](ReadmeImages/image-10.png)
 ---
 
 # ngClass, ngStyle
-![classStyle](image-11.png)
+![classStyle](ReadmeImages/image-11.png)
 ---
 
 # Pipes And Custom Pipes
-![pipesAnd](image-12.png)
+![pipesAnd](ReadmeImages/image-12.png)
 ---
