@@ -1,0 +1,19 @@
+@if (a>b) { {{a}} is greater than {{b}} }
+@else { {{b}} is greater than {{a}} }
+
+<br><br>
+@for (item of items; track $index) {
+{{item}}
+}
+
+<br><br>
+@for (car of cars; track $index) {
+{{car.type}} - {{car.model}} - {{car.year}}
+}
+@empty {
+<p>Nothing Here</p>
+}
+
+<br>
+<hr>
+

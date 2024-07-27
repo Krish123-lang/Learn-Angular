@@ -9,6 +9,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { AttribdirComponent } from './directives/attribdir/attribdir.component';
 import { StructdirComponent } from './directives/structdir/structdir.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
+import { ControlflowComponent } from './controlflow/controlflow.component';
 
 export const routes: Routes = [
     { path: 'first', component: FirstComponent },
@@ -21,4 +22,5 @@ export const routes: Routes = [
     { path: 'attribdir', component: AttribdirComponent },
     { path: 'structdir', component: StructdirComponent },
     { path: 'class', component: NgclassComponent },
+    { path: 'controlflow', component: ControlflowComponent },
 ];
