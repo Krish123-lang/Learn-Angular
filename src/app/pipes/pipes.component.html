@@ -2,4 +2,8 @@
 <p>The hero's birthday is {{ birthday | date:'yyyy' }}</p>
 <p>The hero's birthday is {{ birthday | date:'yyyy' | uppercase }}</p>
 <p>The hero's birthday is {{ birthday | date:'hh:mm':'UTC' }}</p>
-<p>currentTime: {{ currentTime | date:'hh:mm' }}</p>
+<p>current time: {{ currentDate | date:'hh:mm' }}</p>
+<p>Students: {{student|json}}</p>
+<p>Checking Na Pipe: {{student.state|na}}</p>
+<p>Current Time: {{currentTime|async}}</p>
+<p>Current Time: {{currentTime|async|date:'hh:mm:ss'}}</p>
