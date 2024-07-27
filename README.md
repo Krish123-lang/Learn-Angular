@@ -30,3 +30,7 @@
 # ngClass, ngStyle
 ![classStyle](image-11.png)
 ---
+
+# Pipes And Custom Pipes
+![pipesAnd](image-12.png)
+---
