@@ -12,6 +12,7 @@ import { NgclassComponent } from './ngclass/ngclass.component';
 import { ControlflowComponent } from './controlflow/controlflow.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { TemplateformComponent } from './templateform/templateform.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 export const routes: Routes = [
     { path: 'first', component: FirstComponent },
@@ -27,4 +28,5 @@ export const routes: Routes = [
     { path: 'controlflow', component: ControlflowComponent },
     { path: 'pipes', component: PipesComponent },
     { path: 'templateform', component: TemplateformComponent },
+    { path: 'reactiveform', component: ReactiveformComponent },
 ];

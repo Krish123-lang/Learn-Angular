@@ -34,3 +34,7 @@
 # Pipes And Custom Pipes
 ![pipesAnd](ReadmeImages/image-12.png)
 ---
+
+# Reactive Forms
+![reactiveForms](ReadmeImages/image13.png)
+---

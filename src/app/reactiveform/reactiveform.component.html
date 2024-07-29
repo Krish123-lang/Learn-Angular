@@ -1,0 +1,57 @@
+<h1>Reactive Form</h1>
+<p>Create form and validation</p>
+
+<form [formGroup]="studentForm">
+    <label>First Name</label>
+    <input type="text" placeholder="First Name" formControlName="firstName" /> <br><br>
+
+    @if(studentForm.controls['firstName'].touched && studentForm.controls['firstName'].errors?.['required']){
+    <div class="danger">This is required</div>
+    }
+    @else if (studentForm.controls['firstName'].touched && studentForm.controls['firstName'].errors?.['minlength']) {
+    <div class="danger">Minimum 4 characters long</div>
+    }
+
+    <label>Last Name</label>
+    <input type="text" placeholder="Last Name" formControlName="lastName" /> <br><br>
+
+    @if(studentForm.controls['lastName'].touched && studentForm.controls['lastName'].errors?.['required']){
+    <div class="danger">This is required</div>
+    }
+    @else if (studentForm.controls['lastName'].touched && studentForm.controls['lastName'].errors?.['minlength']) {
+    <div class="danger">Minimum 4 characters long</div>
+    }
+
+    <label>Email</label>
+    <input type="text" placeholder="Email" formControlName="email" /> <br><br>
+    @if(studentForm.controls['email'].touched && studentForm.controls['email'].errors?.['email']){
+    <div class="danger">Email not proper</div>
+    }
+
+
+    <label>City</label>
+    <input type="text" placeholder="City" formControlName="city" /> <br><br>
+
+    <label>State</label>
+    <select name="state" id="" formControlName="state">
+        <option value="Bagmati">Bagmati</option>
+        <option value="Koshi">Koshi</option>
+        <option value="Gandaki">Gandaki</option>
+        <option value="Sudur Paschim">Sudur Paschim</option>
+        <option value="Madesh">Madesh</option>
+        <option value="Karnali">Karnali</option>
+        <option value="Lumbini">Lumbini</option>
+    </select>
+
+    <label>Zip</label>
+    <input type="number" placeholder="Zip" formControlName="zip" /> <br><br>
+
+    <input type="checkbox" name="" id="" formControlName="isAccepTerms">Agree to terms and conditions <br><br>
+
+    <button type="reset">Reset Form</button>
+    <button type="submit" [disabled]="studentForm.invalid" (click)="onSave()">Submit</button>
+</form>
+
+<div>
+    {{formValue|json}}
+</div>
