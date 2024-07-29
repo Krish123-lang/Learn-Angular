@@ -1,0 +1,41 @@
+<h1>{{title}}</h1>
+<p>{{subtitle}}</p>
+
+<form>
+    <label for="">First Name</label>
+    <input type="text" [(ngModel)]="studentObj.firstName" name="firstName" /><br><br>
+
+    <label for="">Last Name</label>
+    <input type="text" [(ngModel)]="studentObj.lastName" name="lastName" /> <br><br>
+
+    <label for="">Username</label>
+    <input type="text" [(ngModel)]="studentObj.userName" name="userName" /> <br><br>
+
+    <label for="">City</label>
+    <input type="text" [(ngModel)]="studentObj.city" name="city" /> <br><br>
+
+    <label for="">State</label>
+    <select name="state" id="" [(ngModel)]="studentObj.state">
+        <option value="Bagmati">Bagmati</option>
+        <option value="Madesh">Madesh</option>
+        <option value="Koshi">Koshi</option>
+        <option value="Lumbini">Lumbini</option>
+        <option value="SudurPashchim">SudurPashchim</option>
+        <option value="Gandaki">Gandaki</option>
+        <option value="Karnali">Karnali</option>
+    </select>
+    <br><br>
+
+    <label for="">Zip</label>
+    <input type="number" [(ngModel)]="studentObj.zipCode" name="zipCode" /> <br><br>
+
+    <input type="checkbox" name="isAcceptTerms" id="" [(ngModel)]="studentObj.isAcceptTerms">Agree to terms and
+    conditions
+    <br><br>
+
+    <button type="reset">Reset Form</button>
+    <button type="submit" (click)="onSubmit()">Submit</button>
+
+    {{formValue|json}}
+
+</form>
