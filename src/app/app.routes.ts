@@ -13,6 +13,8 @@ import { ControlflowComponent } from './controlflow/controlflow.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { GetApiComponent } from './api-integrations/get-api/get-api.component';
+import { PostApiComponent } from './api-integrations/post-api/post-api.component';
 
 export const routes: Routes = [
     { path: 'first', component: FirstComponent },
@@ -29,4 +31,6 @@ export const routes: Routes = [
     { path: 'pipes', component: PipesComponent },
     { path: 'templateform', component: TemplateformComponent },
     { path: 'reactiveform', component: ReactiveformComponent },
+    { path: 'get-api', component: GetApiComponent },
+    { path: 'post-api', component: PostApiComponent },
 ];

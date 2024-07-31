@@ -1,0 +1,20 @@
+<p>get-api works!</p>
+<hr>
+<button (click)="getAllUser()">Get Users</button>
+<button (click)="getAllCustomers()">Get Customers</button>
+
+
+@for (item of userList; track $index) {
+<div>
+    <h1>{{item.id}}. {{item.name}}</h1>
+    <strong>Username: {{item.username}}</strong>
+    <p>Email: {{item.email}}</p>
+</div>
+}
+
+@for (customer of customerList; track $index) {
+<div>
+    <p>{{customer.userName}}</p>
+</div>
+}
+<hr>
