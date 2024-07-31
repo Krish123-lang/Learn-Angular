@@ -46,3 +46,7 @@
 # Post-API 
 ![postApi](ReadmeImages/image15.png)
 ---
+
+# PUT & Delete 
+![putDelete](ReadmeImages/image.png)
+---

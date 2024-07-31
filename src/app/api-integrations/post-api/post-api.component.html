@@ -11,15 +11,21 @@
             <th>SNo</th>
             <th>Name</th>
             <th>Logo</th>
+            <th>Action</th>
         </tr>
     </thead>
 
     <tbody>
+
         @for (item of depList; track $index) {
         <tr>
             <td>{{$index+1}}</td>
             <td>{{item.departmentName}}</td>
             <td>{{item.departmentLogo}}</td>
+            <td>
+                <button (click)="onEdit(item)">Edit</button>
+                <button (click)="onDelete(item.departmentId)">Delete</button>
+            </td>
         </tr>
         }
     </tbody>
@@ -36,6 +42,11 @@
         <input type="text" placeholder="Enter Logo Url" name="logo" [(ngModel)]="deptObj.departmentLogo"> <br><br>
 
         <button type="reset">Reset</button>
-        <button type="submit" (click)="onSave()">Save</button>
+
+        @if(deptObj.departmentId==0){
+            <button type="submit" (click)="onSave()">Save</button>
+        }@else {
+            <button type="submit" (click)="onUpdate()">Update</button>
+        }
     </form>
 </div>
