@@ -42,3 +42,7 @@
 # Get-API httpclient
 ![getapi-httpclient](ReadmeImages/image14.png)
 ---
+
+# Post-API 
+![postApi](ReadmeImages/image15.png)
+---
