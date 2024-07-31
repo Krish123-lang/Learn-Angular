@@ -48,5 +48,5 @@
 ---
 
 # PUT & Delete 
-![putDelete](ReadmeImages/image.png)
+![putDelete](ReadmeImages/image16.png)
 ---
