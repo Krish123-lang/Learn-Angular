@@ -2,6 +2,7 @@ import { JsonPipe } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DepartmentService } from '../../service/department.service';
 
 @Component({
   selector: 'app-post-api',
@@ -19,11 +20,26 @@ export class PostApiComponent implements OnInit {
 
   http = inject(HttpClient);
 
+  constructor(private deptSrv: DepartmentService) { };
+
   ngOnInit(): void {
     this.getDepartment()
   }
+  // onSave() {
+  //   this.http.post("https://projectapi.gerasim.in/api/Complaint/AddNewDepartment", this.deptObj).subscribe((res: any) => {
+  //     if (res.result) {
+  //       alert("Department created Successfully !")
+  //       this.getDepartment()
+  //     }
+  //     else {
+  //       alert(res.message)
+  //     }
+  //   })
+  // }
+
+
   onSave() {
-    this.http.post("https://projectapi.gerasim.in/api/Complaint/AddNewDepartment", this.deptObj).subscribe((res: any) => {
+    this.deptSrv.saveNewDept(this.deptObj).subscribe((res: any) => {
       if (res.result) {
         alert("Department created Successfully !")
         this.getDepartment()
@@ -49,8 +65,14 @@ export class PostApiComponent implements OnInit {
 
   depList: any[] = []
 
+  // getDepartment() {
+  //   this.http.get("https://projectapi.gerasim.in/api/Complaint/GetParentDepartment").subscribe((res: any) => {
+  //     this.depList = res.data;
+  //   })
+  // }
+
   getDepartment() {
-    this.http.get("https://projectapi.gerasim.in/api/Complaint/GetParentDepartment").subscribe((res: any) => {
+    this.deptSrv.getAllDept().subscribe((res: any) => {
       this.depList = res.data;
     })
   }
