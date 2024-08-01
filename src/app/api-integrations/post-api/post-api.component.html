@@ -1,7 +1,11 @@
+<app-alert [alertType]="'danger'" [message]="'Welcome to POST API'"></app-alert>
 <div>
     <h3>Post API</h3>
     <h2>Create Department, Department List</h2>
 </div>
+
+<app-my-button (onBtnClick)="getData($event)" [btnClass]="'success'" [btnText]="'Get Data'"></app-my-button>
+
 
 <h4>Department List</h4>
 
@@ -23,8 +27,11 @@
             <td>{{item.departmentName}}</td>
             <td>{{item.departmentLogo}}</td>
             <td>
-                <button (click)="onEdit(item)">Edit</button>
-                <button (click)="onDelete(item.departmentId)">Delete</button>
+                <app-my-button (onBtnClick)="onEdit(item)" [btnClass]="'warning'" [btnText]="'Edit'"></app-my-button>
+                <app-my-button (onBtnClick)="onDelete(item.departmentId)" [btnClass]="'danger'" [btnText]="'Delete'"></app-my-button>
+
+                <!-- <button (click)="onEdit(item)">Edit</button>
+                <button (click)="onDelete(item.departmentId)">Delete</button> -->
             </td>
         </tr>
         }
@@ -41,12 +48,12 @@
         <label for="">Department Logo</label>
         <input type="text" placeholder="Enter Logo Url" name="logo" [(ngModel)]="deptObj.departmentLogo"> <br><br>
 
-        <button type="reset">Reset</button>
-
         @if(deptObj.departmentId==0){
-            <button type="submit" (click)="onSave()">Save</button>
+        <!-- <button type="submit" (click)="onSave()">Save</button> -->
+        <app-my-button (onBtnClick)="onSave()" [btnClass]="'success'" [btnText]="'Save'"></app-my-button>
         }@else {
-            <button type="submit" (click)="onUpdate()">Update</button>
+        <!-- <button type="submit" (click)="onUpdate()">Update</button> -->
+        <app-my-button (onBtnClick)="onUpdate()" [btnClass]="'warning'" [btnText]="'Update'"></app-my-button>
         }
     </form>
 </div>

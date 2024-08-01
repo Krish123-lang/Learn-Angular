@@ -3,11 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DepartmentService } from '../../service/department.service';
+import { AlertComponent } from "../../reusableComponent/alert/alert.component";
+import { MyButtonComponent } from "../../reusableComponent/my-button/my-button.component";
 
 @Component({
   selector: 'app-post-api',
   standalone: true,
-  imports: [FormsModule, JsonPipe],
+  imports: [FormsModule, JsonPipe, AlertComponent, MyButtonComponent],
   templateUrl: './post-api.component.html',
   styleUrl: './post-api.component.css'
 })
@@ -38,6 +40,9 @@ export class PostApiComponent implements OnInit {
   // }
 
 
+  getData(data: any) { }
+
+  
   onSave() {
     this.deptSrv.saveNewDept(this.deptObj).subscribe((res: any) => {
       if (res.result) {

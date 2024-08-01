@@ -1,0 +1,32 @@
+.danger {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.warning {
+    background-color: yellow;
+    color: blueviolet;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.success {
+    background-color: green;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
